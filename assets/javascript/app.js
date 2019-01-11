@@ -1,4 +1,4 @@
-var ride_time;
+var ride_time = 4
 
 $(document).ready(function(){
 
