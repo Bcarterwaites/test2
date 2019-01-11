@@ -20,7 +20,7 @@ $(document).ready(function(){
 		
                 events : {
                     'onReady' : onPlayerReady,
-                    'onStateChange' : onPlayerStateChange
+                    'onStateChange' : onPlayerStateChange,
                 }
             });
         });
@@ -40,6 +40,7 @@ $(document).ready(function(){
         if (ride_time <=5) {
 	event.target.setShuffle({'shufflePlaylist' : true});	
         setTimeout(stopVideo, 5 * 60 *1000);
+		done = true;
           }
 	}
 	}
