@@ -1,0 +1,36 @@
+body {
+    background-image: url("../images/az_subtle/az_subtle_@2X.png");
+}
+img {
+    width: 75%;
+    height: auto;
+}
+
+h1 {
+    font-family: 'Crete Round', serif;
+}
+
+.navbar {
+    background-color: rgb(57,62,65,.95);
+  }
+
+.jumbotron {
+    background-image: url("../images/headerbg.png");
+    color: rgb(246,247,235, .95);
+}
+#rout_img{
+    height: 200px;
+    width: auto;
+}
+#route_img >img {
+    width: 100%;
+    height: auto;
+}
+
+#player {
+    float: right;
+    margin-left: 0;
+}
+#player{
+    margin-bottom: 50px;
+}
