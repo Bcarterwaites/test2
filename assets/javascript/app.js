@@ -20,7 +20,7 @@ $(document).ready(function(){
 		
                 events : {
                     'onReady' : onPlayerReady,
-                    //'onStateChange' : onPlayerStateChange
+                    'onStateChange' : onPlayerStateChange
                 }
             });
         });
@@ -32,14 +32,20 @@ $(document).ready(function(){
 
         var player;
         function onPlayerReady(event) {
-            //event.target.playVideo();
+            event.target.playVideo();
         }
+	var done = false
+	function onPlayerStateChange(event) {
+	if (event.data == YT.PlayerState.PLAYING && !done) {
         if (ride_time <=5) {
-        setTimeout(function()  {
-        event.target.setShuffle({'shufflePlaylist' : true});
-                        }, 5 * 60 *1000);
+	event.target.setShuffle({'shufflePlaylist' : true});	
+        setTimeout(stopVideo, 5 * 60 *1000);
           }
-    
+	}
+	}
+	function stopVideo() {
+		player.stopVideo();
+	}
 });
 
 function get_type_of_ride(){
