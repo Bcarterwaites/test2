@@ -1,6 +1,3 @@
-var ride_time = '';
-console.log(ride_time)
-
 $(document).ready(function(){
 
     $(document).on("click",'input[type="radio"]' ,get_type_of_ride);
@@ -145,6 +142,7 @@ function get_stops(){
         var depart_time = response[0].orig_departure_time;
         var arrival_time =  response[0].orig_arrival_time;
         var ride_time = moment(arrival_time, "HH:mmA").diff(moment(depart_time, "HH:mmA"), "minutes");
+	    console.log(ride_time)
         $("#time").text(ride_time);
         $("#from").text(req1);
         $("#to").text(req2);
